@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- http://127.0.0.1:8000/play2/ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Play2</title>
+    <!-- bootstrep-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- 구글 글꼴 -->
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    {{ name }}님({{ age }}) 안녕하세요? <br>
+    {{ cnt }} 번째 방문자이십니다! <br>
+    <h2>나의 일기</h2>
+    <h4>{{ diary.0 }}</h4>
+    <h4>{{ diary.1 }}</h4>
+    <h4>{{ diary.2 }}</h4>
+
+    {{ name }}님({{ age }}) 안녕하세요? <br>
+    {{ cnt }} 번째 방문자이십니다!<br>
+    {{ victory}}
+    <h2>나의 일기</h2>
+    {% for post in diary %}
+    <h4>{{ post }}</h4>
+    {% endfor %}
+</body>
+
+</html>
